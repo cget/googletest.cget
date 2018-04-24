@@ -11,5 +11,5 @@ else()
   set(gtest_force_shared_crt ON)
 endif()
 
-CGET_HAS_DEPENDENCY(googletest GITHUB google/googletest VERSION "${CGET_REQUESTED_VERSION}" FINDNAME GTest OPTIONS -Dgtest_force_shared_crt=${gtest_force_shared_crt})
+CGET_HAS_DEPENDENCY(googletest GITHUB google/googletest VERSION "${CGET_REQUESTED_VERSION}" FINDNAME GTest OPTIONS ${ARGS_OPTIONS} -Dgtest_force_shared_crt=${gtest_force_shared_crt})
 set(ARGS_NO_FIND_PACKAGE "true")
